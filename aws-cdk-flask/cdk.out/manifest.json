@@ -1,0 +1,131 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "AwsCdkFlaskStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "AwsCdkFlaskStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "AwsCdkFlaskStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "AwsCdkFlaskStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/46a04c8154f733edb8b4b47198ab775c262216293915c8a2cc8f9934c53cf5e9.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "AwsCdkFlaskStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "AwsCdkFlaskStack.assets"
+      ],
+      "metadata": {
+        "/AwsCdkFlaskStack/MyFlaskLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFlaskLambdaServiceRole3D3D3AF9"
+          }
+        ],
+        "/AwsCdkFlaskStack/MyFlaskLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFlaskLambda84A8EEB2"
+          }
+        ],
+        "/AwsCdkFlaskStack/MyApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApi49610EDF"
+          }
+        ],
+        "/AwsCdkFlaskStack/MyApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiDeploymentECB0D05E74bb139523694f9e195402b8b746762a"
+          }
+        ],
+        "/AwsCdkFlaskStack/MyApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiDeploymentStageprodE1054AF0"
+          }
+        ],
+        "/AwsCdkFlaskStack/MyApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiEndpoint869ABE96"
+          }
+        ],
+        "/AwsCdkFlaskStack/MyApi/Default/items/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiitems739EA3DF"
+          }
+        ],
+        "/AwsCdkFlaskStack/MyApi/Default/items/ANY/ApiPermission.AwsCdkFlaskStackMyApi60CB837E.ANY..items": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiitemsANYApiPermissionAwsCdkFlaskStackMyApi60CB837EANYitemsEC5E2788"
+          }
+        ],
+        "/AwsCdkFlaskStack/MyApi/Default/items/ANY/ApiPermission.Test.AwsCdkFlaskStackMyApi60CB837E.ANY..items": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiitemsANYApiPermissionTestAwsCdkFlaskStackMyApi60CB837EANYitemsF1635337"
+          }
+        ],
+        "/AwsCdkFlaskStack/MyApi/Default/items/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiitemsANYC69C2476"
+          }
+        ],
+        "/AwsCdkFlaskStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/AwsCdkFlaskStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/AwsCdkFlaskStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/AwsCdkFlaskStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "AwsCdkFlaskStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
