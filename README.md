@@ -37,11 +37,11 @@ The above command will spin up a docker container that expose port 80 for incomi
 
 ## Production server
 
-This application was deploy on AWS EC2 instance with the public IP Address of [<ins>**44.201.129.186**</ins>](http://44.201.129.186/upload)
+This application was deploy on AWS EC2 instance with the public IP Address of [<ins>**54.235.51.80**</ins>](http://54.235.51.80/upload)
 You can test the endpoints using any client agent. The command below shows the example using cURL.
 
 ```bash
-curl -X POST -F 'file=@sample_file.txt' http://44.201.129.186/upload
+curl -X POST -F 'file=@sample_file.txt' http://54.235.51.80/upload
 ```
 
 The endpoint only accept `POST` HTTP method and the path to the file to upload.
